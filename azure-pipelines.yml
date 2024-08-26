@@ -6,7 +6,7 @@ trigger:
   #     - app/src/*
   
 pool:
-    vmImage: ubuntu-latest
+    name: giova
   
 variables:
   - group: aws-demo-attack-lab-v2
