@@ -152,7 +152,7 @@ stages:
         - iac_validation
         # - iac_scan
       displayName: Docker Build
-      jobs:
+    -  jobs:
         # - job: check_app_changes
         #   displayName: 'Check changes'
         #   steps:
@@ -189,7 +189,7 @@ stages:
           - task: Docker@2
             displayName: dockerBuild
             inputs:
-              containerRegistry: 29c5a2ee-3cf2-453f-bc6c-af40c852272e
+              containerRegistry: $(ContainerRegistry)
               repository: $(imageName)
               command: build
               Dockerfile: '$(appPath)/Dockerfile'
@@ -246,7 +246,7 @@ stages:
           - task: Docker@2
             displayName: dockerPush
             inputs:
-              containerRegistry: 29c5a2ee-3cf2-453f-bc6c-af40c852272e
+              containerRegistry: $(ContainerRegistry)
               repository: $(imageName)
               command: push
               tags: $(imageTag)
