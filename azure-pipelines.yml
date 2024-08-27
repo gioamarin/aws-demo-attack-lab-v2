@@ -28,7 +28,7 @@ stages:
             inputs:
               provider: 'aws'
               command: 'init'
-              backendServiceAWS: '$(backendServiceAWS)'
+              backendServiceAWS: '$(backendAWSBucketName)'
               backendAWSBucketName: '$(projectName)'
               backendAWSKey: '$(backendAWSKey)'
               workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
