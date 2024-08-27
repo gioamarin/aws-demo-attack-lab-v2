@@ -28,8 +28,8 @@ stages:
             inputs:
               provider: 'aws'
               command: 'init'
-              backendServiceAWS: '$(backendAWSBucketName)'
-              backendAWSBucketName: '$(aws-demo-attack-gio)'
+              backendServiceAWS: '$(backendServiceAWS)'
+              backendAWSBucketName: '$(projectName)'
               backendAWSKey: '$(backendAWSKey)'
               workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
           - task: TerraformTaskV4@4
