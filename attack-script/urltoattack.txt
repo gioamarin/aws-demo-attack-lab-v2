@@ -1,1 +1,1 @@
-ab5c6e0eaf6bd4c2ea4fb292068583ae-800378055.us-east-1.elb.amazonaws.com
+http://a2470c01d19bb42e1b78f1f7fe859922-1514768892.us-east-1.elb.amazonaws.com/whoami
