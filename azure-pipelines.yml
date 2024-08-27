@@ -33,10 +33,10 @@ stages:
               backendAWSKey: '$(backendAWSKey)'
               workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
        - task: TerraformTaskV4@4
-            displayName: Terraform Apply
+            displayName: Terraform destroy
             inputs:
               provider: 'aws'
-              command: 'apply'
+              command: 'destroy'
               environmentServiceNameAWS: '$(backendServiceAWS)'
               workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
               commandOptions: '-refresh=false'
