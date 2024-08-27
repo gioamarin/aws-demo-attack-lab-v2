@@ -32,14 +32,14 @@ stages:
               backendAWSBucketName: '$(backendAWSBucketName)'
               backendAWSKey: '$(backendAWSKey)'
               workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
-              - task: TerraformTaskV4@4
-            displayName: Terraform destroy
-            inputs:
-              provider: 'aws'
-              command: 'destroy'
-              environmentServiceNameAWS: '$(backendServiceAWS)'
-              workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
-              commandOptions: '-refresh=false'
+            - task: TerraformTaskV4@4
+              displayName: Terraform destroy
+              inputs:
+                provider: 'aws'
+                command: 'destroy'
+                environmentServiceNameAWS: '$(backendServiceAWS)'
+                workingDirectory: '$(System.DefaultWorkingDirectory)/$(infraPath)'
+                commandOptions: '-refresh=false'
           # - task: TerraformTaskV4@4
           #   displayName: Terraform destroy
           #   inputs:
